@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.redhat.internal.kie.ExceptionTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.313 s - in com.redhat.internal.kie.ExceptionTest

@@ -1,0 +1,37 @@
+<kie-server-state>
+  <controllers>
+    <string>http://localhost:8080/business-central/rest/controller</string>
+  </controllers>
+  <configuration>
+    <configItems>
+      <config-item>
+        <name>org.kie.server.location</name>
+        <value>http://localhost:8090/rest/server</value>
+        <type>java.lang.String</type>
+      </config-item>
+      <config-item>
+        <name>org.kie.server.id</name>
+        <value>myserviceapp</value>
+        <type>java.lang.String</type>
+      </config-item>
+      <config-item>
+        <name>org.kie.server.controller</name>
+        <value></value>
+        <type>java.lang.String</type>
+      </config-item>
+    </configItems>
+  </configuration>
+  <containers>
+    <container>
+      <containerId>LoanApprovalDMN</containerId>
+      <releaseId>
+        <groupId>com.cs</groupId>
+        <artifactId>LoanApprovalDMN</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+      </releaseId>
+      <status>STARTED</status>
+      <configItems/>
+      <messages/>
+    </container>
+  </containers>
+</kie-server-state>
