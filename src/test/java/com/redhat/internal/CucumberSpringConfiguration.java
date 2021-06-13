@@ -1,12 +1,12 @@
-package com.redhat.internal.config;
+package com.redhat.internal;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.redhat.internal.kie.DefaultWebSecurityConfig;
+import com.redhat.internal.kie.Application;
 
 import io.cucumber.spring.CucumberContextConfiguration;
 
 @CucumberContextConfiguration
-@SpringBootTest(classes = DefaultWebSecurityConfig.class)
+@SpringBootTest(classes = Application.class)
 public class CucumberSpringConfiguration {
 }

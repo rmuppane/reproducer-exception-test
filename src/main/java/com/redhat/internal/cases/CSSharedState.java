@@ -1,6 +1,8 @@
 package com.redhat.internal.cases;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class CSSharedState {
     
     private Long processId;
@@ -12,6 +14,4 @@ public class CSSharedState {
 	public void setProcessId(Long processId) {
 		this.processId = processId;
 	}
-
-
 }

@@ -1,17 +1,17 @@
 Feature: Test case 'cs'
 
     Scenario: 1
-    		Given a request to check for 'LoanApprovalDMN.loanapprovalprocess' when the customer financial status is 
-	      |CreditScore   			|630   				|
-	      |DTI								|0.34					|
+    		Given a request to check for 'test-dmn.EvaluatedDesignOption1B2' when the customer financial status is 
+	      |state   										|uk   				|
+	      |zone												|London				|
+	      |dateOfIncorporationMonths	|6						|
+	      |dateOfIncorporation				|2021-01-01		|
+	      |companyTypeEnName					|Ltd					|
+	      |countryCode								|165					|
 	      And customer Loan might be 'Approved'
-	  Scenario: 2
-        Given a request to check for 'LoanApprovalDMN.loanapprovalprocess' when the customer financial status is 
-	      |CreditScore   			|740   				|
-	      |DTI								|0.56					|
-	      And customer Loan might be 'Declined'
-	  Scenario: 3
-        Given a request to check for 'LoanApprovalDMN.loanapprovalprocess' when the customer financial status is 
-	      |CreditScore   			|500  				|
-	      |DTI								|1.56					|
-	      And customer Loan might be 'Declined'
+	      |documetEnName | rama.doc |
+	      |documetFrName | rama.doc |
+	      |documetEnName | rama.doc |
+	      
+	      
+	      

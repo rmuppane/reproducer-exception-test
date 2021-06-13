@@ -1,5 +1,3 @@
-com/redhat/internal/cases/CSSteps.class
-com/redhat/internal/cases/CSSharedState.class
-com/redhat/internal/kie/ExceptionTest.class
-com/redhat/internal/config/RunnerTest.class
-com/redhat/internal/config/CucumberSpringConfiguration.class
+com/redhat/internal/steps/CSSteps.class
+com/redhat/internal/CucumberSpringConfiguration.class
+com/redhat/internal/cases/RunnerTest.class

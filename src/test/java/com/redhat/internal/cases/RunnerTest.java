@@ -1,4 +1,4 @@
-package com.redhat.internal.config;
+package com.redhat.internal.cases;
 
 import org.junit.runner.RunWith;
 
@@ -18,7 +18,7 @@ plugin = { "pretty", "html:target/cucumber-reports" }
 @CucumberOptions( 
 		features = "classpath:cs.feature",
 		plugin = { "pretty", "html:target/cucumber-reports" },
-		extraGlue = {"com.redhat.internal.config", "com.redhat.internal.cases"}
+		extraGlue = {"com.redhat.internal"}
 		)
 public class RunnerTest {
 

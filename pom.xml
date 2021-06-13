@@ -8,15 +8,13 @@
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>reproducer-exception-test</name>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.2.RELEASE</version>
 	</parent>
-
 	<properties>
-		<version.org.kie>7.48.0.Final-redhat-00006</version.org.kie>
+		<version.org.kie>7.55.0.Final</version.org.kie>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,7 +29,6 @@
 		<cucumber.version>6.10.4</cucumber.version>
 		<ba.bom.version>7.7.0.redhat-00002</ba.bom.version>
 	</properties>
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -51,13 +48,22 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.kie</groupId>
 			<artifactId>kie-server-spring-boot-starter-drools</artifactId>
 			<version>${version.org.kie}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-server-spring-boot-starter</artifactId>
+			<version>${version.org.kie}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.redhat</groupId>
+	   	 	<artifactId>test-dmn</artifactId>
+	    	<version>1.0.1-SNAPSHOT</version>
+	    </dependency>
 		<dependency>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-rt-rs-service-description-swagger</artifactId>
@@ -80,12 +86,6 @@
 			<version>${version.org.webjars}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.kie</groupId>
-			<artifactId>kie-server-spring-boot-starter</artifactId>
-			<version>${version.org.kie}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -95,7 +95,6 @@
 			<artifactId>failsafe</artifactId>
 			<version>2.3.3</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -140,19 +139,17 @@
 				<configuration>
 					<artifactItems>
 						<artifactItem>
-							<groupId>com.cs</groupId>
-							<artifactId>LoanApprovalDMN</artifactId>
-							<version>1.0.0-SNAPSHOT</version>
-						</artifactItem>
+							<groupId>com.redhat</groupId>
+					   	 	<artifactId>test-dmn</artifactId>
+					    	<version>1.0.1-SNAPSHOT</version>
+					    </artifactItem>
 					</artifactItems>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 
 	<profiles>
-
 		<profile>
 			<id>h2</id>
 			<activation>
@@ -165,7 +162,6 @@
 				</dependency>
 			</dependencies>
 		</profile>
-
 		<profile>
 			<id>mysql</id>
 			<activation>
@@ -185,7 +181,6 @@
 				</dependency>
 			</dependencies>
 		</profile>
-
 		<profile>
 			<id>postgres</id>
 			<activation>
@@ -205,7 +200,6 @@
 				</dependency>
 			</dependencies>
 		</profile>
-
 		<profile>
 			<id>docker</id>
 			<activation>
@@ -213,7 +207,6 @@
 					<name>docker</name>
 				</property>
 			</activation>
-
 			<build>
 				<plugins>
 					<plugin>
@@ -280,12 +273,10 @@
 					<name>openshift</name>
 				</property>
 			</activation>
-
 			<properties>
 				<fabric8.mode>openshift</fabric8.mode>
 				<fabric8.build.strategy>docker</fabric8.build.strategy>
 			</properties>
-
 			<build>
 				<plugins>
 					<plugin>
@@ -349,7 +340,6 @@
 			</build>
 		</profile>
 	</profiles>
-
 	<repositories>
 		<repository>
 			<id>jboss-public-repository-group</id>
